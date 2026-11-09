@@ -1,0 +1,396 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Contact - Illusionverse Museum</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- ANNOUNCEMENT BAR -->
+    <div class="announcement">
+        <p>
+            Secure Your Spot Now!
+            <a href="tickets.html">Buy Tickets HERE</a>
+        </p>
+    </div>
+
+    <!-- HEADER AND NAVIGATION -->
+    <header class="navbar">
+
+        <a href="index.html" class="logo">
+            <img src="images/logo.png"
+                 alt="Illusionverse Museum Logo">
+        </a>
+
+        <button class="menu-toggle"
+                id="menuToggle"
+                aria-label="Toggle navigation"
+                aria-expanded="false">
+            ☰
+        </button>
+
+        <nav class="nav-links" id="navLinks">
+            <a href="index.html">HOME</a>
+            <a href="about.html">ABOUT</a>
+            <a href="gallery.html">GALLERY</a>
+            <a href="tickets.html">TICKETS</a>
+            <a href="contact.html" class="active">CONTACT</a>
+        </nav>
+
+        <a href="tickets.html" class="buy-btn">
+            BUY TICKETS
+        </a>
+
+    </header>
+
+    <!-- CONTACT INTRODUCTION -->
+    <section class="contact-header">
+        <h1>CONTACT US</h1>
+        <p>
+            Have any questions about our museum?
+            We would love to hear from you!
+        </p>
+    </section>
+
+    <!-- CONTACT FORM -->
+    <main class="contact-section">
+
+        <h2>Get In Touch</h2>
+		
+		 <div class="contact-layout">
+
+        <!-- LEFT SIDE: CONTACT FORM -->
+        <div class="contact-left">
+
+        <form id="contactForm" class="contact-form">
+
+    <h3>Visitor Information</h3>
+
+    <div class="contact-form-grid">
+
+        <!-- FULL NAME -->
+        <div class="form-field">
+            <label for="fullName">Full Name</label>
+            <input type="text"
+                   id="fullName"
+                   name="fullName"
+                   placeholder="Enter your full name"
+                   required>
+        </div>
+
+        <!-- EMAIL -->
+        <div class="form-field">
+            <label for="email">Email Address</label>
+            <input type="email"
+                   id="email"
+                   name="email"
+                   placeholder="example@email.com"
+                   required>
+        </div>
+
+        <!-- PHONE -->
+        <div class="form-field">
+            <label for="phone">Phone Number</label>
+            <input type="tel"
+                   id="phone"
+                   name="phone"
+                   placeholder="0123456789"
+                   pattern="[0-9]{10,11}"
+                   title="Enter 10 or 11 digits"
+                   required>
+        </div>
+
+        <!-- NUMBER OF VISITORS -->
+        <div class="form-field">
+            <label for="visitorCount">
+                Number of Visitors
+            </label>
+            <input type="number"
+                   id="visitorCount"
+                   name="visitorCount"
+                   min="1"
+                   max="50"
+                   value="1"
+                   required>
+        </div>
+
+        <!-- VISIT DATE -->
+        <div class="form-field">
+            <label for="contactDate">
+                Preferred Visit Date
+            </label>
+            <input type="date"
+                   id="contactDate"
+                   name="contactDate"
+                   required>
+        </div>
+
+        <!-- VISIT TIME -->
+        <div class="form-field">
+            <label for="contactTime">
+                Preferred Visit Time
+            </label>
+            <input type="time"
+                   id="contactTime"
+                   name="contactTime"
+                   min="10:00"
+                   max="18:00"
+                   required>
+        </div>
+
+        <!-- SELECT LIST -->
+        <div class="form-field full-width">
+            <label for="visitPurpose">
+                Visit Purpose
+            </label>
+            <select id="visitPurpose"
+                    name="visitPurpose"
+                    required>
+                <option value="">Select Purpose</option>
+                <option value="Leisure">Leisure</option>
+                <option value="Family Visit">Family Visit</option>
+                <option value="School Trip">School Trip</option>
+                <option value="Educational Tour">
+                    Educational Tour
+                </option>
+            </select>
+        </div>
+
+        <!-- RADIO BUTTON -->
+        <fieldset class="form-field full-width">
+
+            <legend>Visitor Type</legend>
+
+            <div class="form-choice">
+                <label>
+                    <input type="radio"
+                           name="visitorType"
+                           value="Individual"
+                           required>
+                    Individual
+                </label>
+
+                <label>
+                    <input type="radio"
+                           name="visitorType"
+                           value="Group">
+                    Group
+                </label>
+
+                <label>
+                    <input type="radio"
+                           name="visitorType"
+                           value="School">
+                    School
+                </label>
+            </div>
+
+        </fieldset>
+
+        <!-- CHECKBOX -->
+        <fieldset class="form-field full-width">
+
+            <legend>Interested Attractions</legend>
+
+            <div class="form-choice">
+                <label>
+                    <input type="checkbox"
+                           name="attractions"
+                           value="Infinity Room">
+                    Infinity Room
+                </label>
+
+                <label>
+                    <input type="checkbox"
+                           name="attractions"
+                           value="Vortex Tunnel">
+                    Vortex Tunnel
+                </label>
+
+                <label>
+                    <input type="checkbox"
+                           name="attractions"
+                           value="Ames Room">
+                    Ames Room
+                </label>
+            </div>
+
+        </fieldset>
+		
+		
+<!-- DEMO PASSWORD INPUT -->
+<div class="form-field full-width">
+
+    <label for="demoPassword">
+        Demo Password
+    </label>
+
+    <input type="password"
+           id="demoPassword"
+           name="demoPassword"
+           placeholder="Enter demo password"
+           minlength="6"
+           autocomplete="new-password"
+           required>
+
+    <small class="form-hint">
+        For assignment demonstration only.
+        Do not enter your real password.
+    </small>
+
+</div>
+
+
+        <!-- MESSAGE -->
+        <div class="form-field full-width">
+            <label for="message">Your Message</label>
+            <textarea id="message"
+                      name="message"
+                      rows="5"
+                      placeholder="Write your message here..."
+                      required></textarea>
+        </div>
+
+    </div>
+
+    <!-- AGREEMENT -->
+    <label class="agree-label">
+        <input type="checkbox"
+               id="contactAgreement"
+               required>
+        I agree to be contacted regarding my inquiry.
+    </label>
+
+    <!-- SUBMIT AND RESET -->
+    <div class="form-buttons">
+
+        <button type="submit" class="contact-submit">
+            SEND MESSAGE
+        </button>
+
+        <button type="reset" class="contact-reset">
+            RESET
+        </button>
+
+    </div>
+
+    <!-- CONFIRMATION MESSAGE -->
+    <p id="contactMessage" role="status"></p>
+
+
+        </form>
+
+        <!-- CLOSE LEFT SIDE -->
+        </div>
+
+        <!-- RIGHT SIDE: GOOGLE MAPS -->
+        <div class="contact-right">
+
+            <h3>Find Our Museum</h3>
+
+            <div class="map-container">
+
+                <iframe
+                    src="https://www.google.com/maps?q=Bukit+Bintang+Kuala+Lumpur&output=embed"
+                    title="Illusionverse Museum Location"
+                    loading="lazy"
+                    allowfullscreen>
+                </iframe>
+
+            </div>
+
+            <div class="contact-info">
+
+                <h3>Our Location</h3>
+                <p>Bukit Bintang, Kuala Lumpur, Malaysia</p>
+
+                <h3>Opening Hours</h3>
+                <p>Monday - Sunday</p>
+                <p>10:00 AM - 6:00 PM</p>
+
+            </div>
+
+
+</div>
+
+<!-- CLOSE CONTACT LAYOUT -->
+</div>
+
+    </main>
+
+  
+<!-- FOOTER -->
+<footer class="site-footer">
+
+    <div class="footer-container">
+
+        <!-- LOGO AND DESCRIPTION -->
+        <div class="footer-about">
+
+            <a href="index.html">
+                <img src="images/logo.png"
+                     alt="Illusionverse Museum Logo"
+                     class="footer-logo">
+            </a>
+
+            <p>
+                Where Reality Meets Imagination.
+                Discover the impossible through
+                art, science and optical illusions.
+            </p>
+
+        </div>
+
+        <!-- QUICK LINKS -->
+        <div class="footer-links">
+
+            <h3>Quick Links</h3>
+
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="tickets.html">Tickets</a>
+            <a href="contact.html">Contact</a>
+
+        </div>
+
+        <!-- CONTACT INFORMATION -->
+        <div class="footer-contact">
+
+            <h3>Contact Us</h3>
+
+            <p>📍 Kuala Lumpur, Malaysia</p>
+
+            <p>✉ info@illusionverse.example</p>
+
+            <p>🕒 10:00 AM - 6:00 PM</p>
+
+        </div>
+
+    </div>
+
+    <!-- COPYRIGHT -->
+    <div class="footer-bottom">
+
+        <p>
+            &copy; 2026 ILLUSIONVERSE MUSEUM.
+            All Rights Reserved.
+        </p>
+
+    </div>
+
+</footer>
+
+
+    <script src="js/script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,383 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Tickets - Illusionverse Museum</title>
+	
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- ANNOUNCEMENT BAR -->
+    <div class="announcement">
+        <p>
+            Secure Your Spot Now!
+            <a href="tickets.html">Buy Tickets HERE</a>
+        </p>
+    </div>
+
+    <!-- HEADER & NAVIGATION -->
+    <header class="navbar">
+
+        <a href="index.html" class="logo">
+            <img src="images/logo.png"
+                 alt="Illusionverse Museum Logo">
+        </a>
+
+        <button class="menu-toggle"
+                id="menuToggle"
+                aria-label="Toggle navigation"
+                aria-expanded="false">
+            ☰
+        </button>
+
+        <nav class="nav-links" id="navLinks">
+            <a href="index.html">HOME</a>
+            <a href="about.html">ABOUT</a>
+            <a href="gallery.html">GALLERY</a>
+            <a href="tickets.html" class="active">TICKETS</a>
+            <a href="contact.html">CONTACT</a>
+        </nav>
+
+        <a href="tickets.html" class="buy-btn">
+            BUY TICKETS
+        </a>
+
+    </header>
+
+    <!-- TICKET INTRODUCTION -->
+    <section class="ticket-header">
+        <h1>BOOK YOUR TICKETS</h1>
+        <p>
+            Get ready for an unforgettable
+            illusion experience!
+        </p>
+    </section>
+
+    <!-- TICKET PRICE TABLE -->
+    <section class="ticket-section">
+
+        <h2>Ticket Prices</h2>
+
+        <table class="ticket-table">
+            <tr>
+                <th>Ticket Type</th>
+                <th>Description</th>
+                <th>Price</th>
+            </tr>
+
+            <tr>
+                <td>Adult</td>
+                <td>13 years and above</td>
+                <td>RM45</td>
+            </tr>
+
+            <tr>
+                <td>Child</td>
+                <td>4 - 12 years</td>
+                <td>RM25</td>
+            </tr>
+
+            <tr>
+                <td>Student</td>
+                <td>Valid student ID required</td>
+                <td>RM35</td>
+            </tr>
+        </table>
+
+    </section>
+
+    <!-- BOOKING FORM -->
+    <section class="booking-section">
+
+    <h2>BOOK YOUR VISIT</h2>
+    <p>Complete your details to reserve your experience.</p>
+
+    <form id="ticketForm" class="booking-form">
+
+        <!-- TWO COLUMN LAYOUT -->
+        <div class="booking-grid">
+
+            <!-- LEFT SIDE -->
+            <div class="booking-column">
+
+                <h3>Contact Details</h3>
+
+                <label for="customerName">Contact Person</label>
+                <input type="text"
+                       id="customerName"
+                       name="customerName"
+                       placeholder="Enter your full name"
+                       required>
+
+                <label for="customerEmail">Email Address</label>
+                <input type="email"
+                       id="customerEmail"
+                       name="customerEmail"
+                       placeholder="Enter your email"
+                       required>
+
+                <label for="customerPhone">Phone Number</label>
+                <input type="tel"
+                       id="customerPhone"
+                       name="customerPhone"
+                       placeholder="0123456789"
+                       pattern="[0-9]{10,11}"
+                       title="Enter 10 or 11 digits"
+                       required>
+
+                <label for="bookingMessageText">Message</label>
+                <textarea id="bookingMessageText"
+                          name="message"
+                          rows="4"
+                          placeholder="Any special requests?"></textarea>
+
+            </div>
+
+            <!-- RIGHT SIDE -->
+            <div class="booking-column">
+
+                <h3>Visit Details</h3>
+
+                <label for="visitDate">Visit Date</label>
+                <input type="date"
+                       id="visitDate"
+                       name="visitDate"
+                       required>
+
+                <label for="visitTime">Visit Time</label>
+                <input type="time"
+                       id="visitTime"
+                       name="visitTime"
+                       min="10:00"
+                       max="18:00"
+                       required>
+
+                <label for="quantity">Quantity of Visitors</label>
+                <input type="number"
+                       id="quantity"
+                       name="quantity"
+                       min="1"
+                       max="20"
+                       value="1"
+                       required>
+
+                <label for="visitPurpose">Visit Purpose</label>
+                <select id="visitPurpose"
+                        name="visitPurpose"
+                        required>
+                    <option value="">Select Purpose</option>
+                    <option value="Leisure">Leisure</option>
+                    <option value="School Trip">School Trip</option>
+                    <option value="Family Visit">Family Visit</option>
+                    <option value="Educational Tour">
+                        Educational Tour
+                    </option>
+                </select>
+
+            </div>
+
+        </div>
+
+        <!-- RADIO BUTTON -->
+        <fieldset class="booking-options">
+
+            <legend>Choose Ticket Type</legend>
+
+            <div class="booking-choices">
+
+                <label>
+                    <input type="radio"
+                           name="ticketType"
+                           value="45"
+                           required>
+                    Adult - RM45
+                </label>
+
+                <label>
+                    <input type="radio"
+                           name="ticketType"
+                           value="25">
+                    Child - RM25
+                </label>
+
+                <label>
+                    <input type="radio"
+                           name="ticketType"
+                           value="35">
+                    Student - RM35
+                </label>
+
+            </div>
+
+        </fieldset>
+
+        <!-- CHECKBOX -->
+        <fieldset class="booking-options">
+
+            <legend>Interested Attractions</legend>
+
+            <div class="booking-choices">
+
+                <label>
+                    <input type="checkbox"
+                           name="attractions"
+                           value="Infinity Room">
+                    Infinity Room
+                </label>
+
+                <label>
+                    <input type="checkbox"
+                           name="attractions"
+                           value="Vortex Tunnel">
+                    Vortex Tunnel
+                </label>
+
+                <label>
+                    <input type="checkbox"
+                           name="attractions"
+                           value="Ames Room">
+                    Ames Room
+                </label>
+
+            </div>
+
+        </fieldset>
+
+        <!-- AGREEMENT -->
+        <label class="booking-agreement">
+            <input type="checkbox"
+                   id="bookingAgreement"
+                   required>
+            I confirm that the information provided is correct.
+        </label>
+
+        <!-- TOTAL PRICE -->
+        <div class="booking-total">
+            <h3>TOTAL PRICE</h3>
+            <p id="totalPrice">RM 0.00</p>
+        </div>
+
+        <!-- BUTTONS -->
+        <div class="booking-buttons">
+
+            <button type="submit" class="booking-submit">
+                SUBMIT BOOKING
+            </button>
+
+            <button type="reset" class="booking-reset">
+                RESET
+            </button>
+
+        </div>
+
+        <p id="bookingMessage" role="status"></p>
+
+        </form>
+
+    </section>
+
+
+<!-- BOOKING SUCCESS POPUP -->
+<div id="bookingPopup" class="popup-overlay">
+
+    <div class="popup-box">
+
+        <div class="popup-icon">
+            &#10003;
+        </div>
+
+        <h2>Booking Completed!</h2>
+
+        <h3>Thank you for your booking!</h3>
+
+        <p>
+            Your booking request has been
+            received successfully.
+        </p>
+
+        <button type="button"
+                id="closePopup"
+                class="popup-button">
+            OK
+        </button>
+
+    </div>
+
+</div>
+
+   
+<!-- FOOTER -->
+<footer class="site-footer">
+
+    <div class="footer-container">
+
+        <!-- LOGO AND DESCRIPTION -->
+        <div class="footer-about">
+
+            <a href="index.html">
+                <img src="images/logo.png"
+                     alt="Illusionverse Museum Logo"
+                     class="footer-logo">
+            </a>
+
+            <p>
+                Where Reality Meets Imagination.
+                Discover the impossible through
+                art, science and optical illusions.
+            </p>
+
+        </div>
+
+        <!-- QUICK LINKS -->
+        <div class="footer-links">
+
+            <h3>Quick Links</h3>
+
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="tickets.html">Tickets</a>
+            <a href="contact.html">Contact</a>
+
+        </div>
+
+        <!-- CONTACT INFORMATION -->
+        <div class="footer-contact">
+
+            <h3>Contact Us</h3>
+
+            <p>📍 Kuala Lumpur, Malaysia</p>
+
+            <p>✉ info@illusionverse.example</p>
+
+            <p>🕒 10:00 AM - 6:00 PM</p>
+
+        </div>
+
+    </div>
+
+    <!-- COPYRIGHT -->
+    <div class="footer-bottom">
+
+        <p>
+            &copy; 2026 ILLUSIONVERSE MUSEUM.
+            All Rights Reserved.
+        </p>
+
+    </div>
+
+</footer>
+
+
+    <script src="js/script.js"></script>
+
+</body>
+</html>
+
